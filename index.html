@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAU Code</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            padding: 30px;
+            background: #1e1e1e;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255,255,255,0.15);
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .code {
+            color: #00ff88;
+            background: #000;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            word-break: break-all;
+            user-select: all;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #00ff88;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #00cc6a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>TRAU CODE</h1>
+
+        <div class="code" id="code">
+            TRAU_9198561507490B5476A75D62BAC2FD372C293EFC99CFB7BF
+        </div>
+
+        <button onclick="copyCode()">COPY CODE</button>
+    </div>
+
+    <script>
+        function copyCode() {
+            const code = document.getElementById("code").innerText;
+
+            navigator.clipboard.writeText(code);
+
+            alert("Đã copy code!");
+        }
+    </script>
+
+</body>
+</html>
